@@ -33,8 +33,37 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        //expected output is 55
-        System.out.println(recursiveFib(10));
-        System.out.println(linearFib(10));
+        int termToFind = 10;
+        int recursiveFib = 0;
+        int linearFib = 0;
+
+        Long startTime = System.currentTimeMillis();
+        recursiveFib = recursiveFib(termToFind);
+        Long endTime = System.currentTimeMillis();
+        System.out.println("Finding the " + termToFind + "th term RECURSIVELY took: " + (endTime - startTime) + "ms");
+        startTime = System.currentTimeMillis();
+        linearFib = linearFib(termToFind);
+        endTime = System.currentTimeMillis();
+        System.out.println("Finding the " + termToFind + "th term Linearly took: " + (endTime - startTime) + "ms");
+
+        termToFind = 20;
+        startTime = System.currentTimeMillis();
+        recursiveFib = recursiveFib(termToFind);
+        endTime = System.currentTimeMillis();
+        System.out.println("Finding the " + termToFind + "th term RECURSIVELY took: " + (endTime - startTime) + "ms");
+        startTime = System.currentTimeMillis();
+        linearFib = linearFib(termToFind);
+        endTime = System.currentTimeMillis();
+        System.out.println("Finding the " + termToFind + "th term Linearly took: " + (endTime - startTime) + "ms");
+
+        termToFind = 50;
+        startTime = System.currentTimeMillis();
+        recursiveFib = recursiveFib(termToFind);
+        endTime = System.currentTimeMillis();
+        System.out.println("Finding the " + termToFind + "th term RECURSIVELY took: " + (endTime - startTime) + "ms");
+        startTime = System.currentTimeMillis();
+        linearFib = linearFib(termToFind);
+        endTime = System.currentTimeMillis();
+        System.out.println("Finding the " + termToFind + "th term Linearly took: " + (endTime - startTime) + "ms");
     }
 }
